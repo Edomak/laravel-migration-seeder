@@ -15,12 +15,12 @@ class CreateTravelsTable extends Migration
     {
         Schema::create('travels', function (Blueprint $table) {
             $table->id();
-            $table->date("data_arrivo");
-            $table->date("data_partenza");
+            $table->string("data_arrivo");
+            $table->string("data_partenza");
             $table->integer("num_persone")->default(1);
             $table->integer("notti_totali")->default(1);
             $table->string("struttura_pernottamento", 50);
-            $table->Text("descrizione")->nullable();
+            $table->text("descrizione")->nullable();
             $table->float("prezzo_totale", 6, 2);
             $table->boolean("is_available")->default(1);
             $table->timestamps();
