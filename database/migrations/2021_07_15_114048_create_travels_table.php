@@ -22,7 +22,7 @@ class CreateTravelsTable extends Migration
             $table->string("struttura_pernottamento", 50);
             $table->Text("descrizione")->nullable();
             $table->float("prezzo_totale", 6, 2);
-            $table->boolean('is_available')->default(1);
+            $table->boolean("is_available")->default(1);
             $table->timestamps();
         });
     }
